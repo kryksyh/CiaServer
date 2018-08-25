@@ -1,6 +1,15 @@
 # CiaServer
 This is a small helper script which allows you to install CIA files via FBI over your local network.
 
+### Note to windows users
+To use this tool you need Python3 to be installed. Make sure you check `Add to path` setting.
+
+## Installation
+
+```
+pip install qrcode
+```
+
 ## Usage 
 
 ### KDE
@@ -15,8 +24,8 @@ then it will be available right in the context menu `Actions/Install from QR Cod
 $ ./CiaServer.py path/to/game.cia
 ```
 ### Windows
-To run it you need Python3 to be installed. Make sure you check `Add to path` setting.
+
 
 ```
-C:\> python CiaServer.py path/to/game.cia
+C:\> python CiaServer.py path\to\game.cia
 ```
