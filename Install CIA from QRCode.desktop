@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Service
+Actions=CreateQRCode;
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=user-extension/x.3ds-cia;
+
+[Desktop Action CreateQRCode]
+Exec={EXEC} %F
+Name=Install from QR-Code
+Icon=view-barcode

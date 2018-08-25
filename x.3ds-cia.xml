@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="user-extension/x.3ds-cia">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <comment>Nintendo 3DS Software Package</comment>
+  <icon name="applications-games"/>
+  <glob-deleteall/>
+  <glob pattern="*.cia"/>
+</mime-type>
