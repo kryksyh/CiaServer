@@ -12,8 +12,8 @@ import socket
 
 ip = socket.gethostbyname(socket.gethostname())
 
-if len(sys.argv < 2):
-    print(f'Usage:\n $ {argv[0]} /path/to/game.cia')
+if len(sys.argv) < 2:
+    print(f'Usage:\n $ {sys.argv[0]} /path/to/game.cia')
     exit(1)
 
 # If no external IP was detected there is no point to continue
@@ -51,7 +51,7 @@ root = tk.Tk()
 canvas = tk.Canvas(root, width=img.height, height=img.height)
 canvas.pack()
 img = tk.PhotoImage(file=tmp.name)
-canvas.create_image(0, 0, image=img)
+canvas.create_image(0, 0, anchor=tk.NW, image=img)
 tk.mainloop()
 
 # Shutting down server after image was closed
