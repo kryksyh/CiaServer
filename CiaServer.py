@@ -27,11 +27,15 @@ cia_name = cia.split(os.sep)[-1]
 cia_path = cia.replace(cia_name,'')
 os.chdir(cia_path)
 
+# Creating simlink to simplify filename
+symlink_name = cia_name[:cia_name.index('(')].strip() + '.cia'
+os.symlink(cia_name, symlink_name)
+
 # Binding to random port to allow multiple copies running
 # there is slim chance to fail here, but i'll leave it as it is
 # for simplicity's sake
 port = random.randint(20000, 40000)
-url = f'http://{ip}:{port}/{urllib.parse.quote(cia_name)}'
+url = f'http://{ip}:{port}/{urllib.parse.quote(symlink_name)}'
 
 
 # Starting server on first detected external IP
@@ -57,4 +61,5 @@ tk.mainloop()
 # Shutting down server after image was closed
 # It will serve all existing connections though,
 # so it is save to close window before download is finished
+os.remove(symlink_name)
 s.shutdown()
